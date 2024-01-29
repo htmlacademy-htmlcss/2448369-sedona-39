@@ -1,8 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Anna Baidikova](https://up.htmlacademy.ru/htmlcss/39/user/2448369).
-* Наставник: [Дмитрий Осадченко] (https://htmlacademy.ru/profile/dimaos).
-* Сайт: [Мой проект Седона] (https://annetdev.github.io/2448369-sedona-39/).
+* Наставник: [Дмитрий Осадченко](https://htmlacademy.ru/profile/dimaos).
+* Сайт: [Мой проект Седона](https://annetdev.github.io/2448369-sedona-39/).
 
 ---
 

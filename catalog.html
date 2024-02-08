@@ -89,8 +89,16 @@
             </ul>
           </fieldset>
 
-          <fieldset class="catalog-filter-group">Стоимость, <span>₽:</span>
-            от до
+
+
+          <fieldset class="catalog-filter-group">
+            <legend>Стоимость, <span>₽:</span></legend>
+            <label for="price-from" class="visually-hidden">От:</label>
+            <input type="number" id="price-from" name="price-from" min="0" placeholder="От" value="0">
+
+            <label for="price-to" class="visually-hidden">До:</label>
+            <input type="number" id="price-to" name="price-to" min="0" placeholder="До" value="9000">
+
           </fieldset>
 
           <button class="button" type="submit">Применить</button>

@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "PT sans";
   font-style: normal;
@@ -14,8 +20,15 @@
   font-display: swap;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT sans", sans-serif;
 
   font-size: 18px;
@@ -26,9 +39,9 @@ body {
 }
 
 .container {
+  flex-grow: 1;
   width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 
   background-color: #ffffff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
@@ -52,9 +65,33 @@ body {
   text-align: center;
 }
 
+.main-logo {
+  margin-left: 70px;
+  margin-right: 28px;
+}
+
+.page-navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .navigation-list {
   color: #000000;
+
+
+  width: 465px;
+  /*340+124 запасное пространство для добавления пункта меню */
+  margin-right: 285px;
 }
+
+.navigation-user {
+  max-width: 315px;
+  /*268+44 запасное пространство для добавления пункта меню */
+  margin-left: auto;
+  margin-right: 20px;
+}
+
 
 .navigation-link {
   font-weight: 700;
@@ -73,11 +110,19 @@ body {
   line-height: 10px;
 }
 
+.header-button {
+  margin-right: 70px;
+  width: 160px;
+}
+
 .hero {
-  background-image:  url("../images/index-background.jpg"), url("../images/divider.png");
+  background-image:
+    url("../images/divider.png"),
+    url("../images/index-background.jpg");
   background-color: rgb(82, 130, 168);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto, cover;
+  background-position: center bottom, center;
 }
 
 .advantages {
@@ -90,6 +135,11 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   color: #000000;
+}
+
+.advantages-list {
+  margin: 0;
+  padding: 0;
 }
 
 .advatages-lead-description {
@@ -141,6 +191,13 @@ body {
   text-transform: uppercase;
 }
 
+.services-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .sedona-services-description {
   font-size: 22px;
   line-height: 26px;
@@ -151,7 +208,7 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-  color:#000000;
+  color: #000000;
 }
 
 .heading2-description {
@@ -159,8 +216,16 @@ body {
   line-height: 21px;
 }
 
+.add-dates {
+  font-size: 22px;
+  line-height: 26px;
+}
+
 .services-item {
   background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  height: 385px;
+  text-align: center;
 }
 
 .services-item:nth-child(even) {
@@ -187,15 +252,20 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
 
-  text-align: center;
   color: #ffffff;
+
+  text-align: center;
 }
 
 .subscription-heading {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  color:#ffffff;
+  color: #ffffff;
+}
+
+.catalog-subscription-heading {
+  color: #000000;
 }
 
 .subscription-paragraph {
@@ -228,6 +298,10 @@ body {
   color: #ffffff;
 }
 
+.inner-header {
+  margin: 0 70px;
+}
+
 .inner-header-title {
   font-weight: 700;
   font-size: 60px;
@@ -239,6 +313,22 @@ body {
   line-height: 21px;
   text-decoration: none;
   color: #ffffff;
+}
+
+.catalog-filter {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 70px;
+}
+
+.catalog-filter-group {
+  width: 150px;
+  margin-right: 70px;
+}
+
+.catalog-filter-group-price {
+  width: 288px;
+  margin-left: 140px;
 }
 
 .catalog-filter-title {
@@ -262,6 +352,15 @@ body {
   line-height: 21px;
 
   color: rgba(51, 51, 51, 1);
+}
+
+.hotels-filter-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-results {
+  margin: 0 70px;
 }
 
 .product-card-title {
@@ -295,6 +394,8 @@ body {
 
 .pagitanion-current-button {
   background-color: rgba(242, 242, 242, 1);
+  text-decoration: none;
+  color: #000000;
 }
 
 .pagitanion-link {
@@ -313,4 +414,16 @@ body {
 
 .footer {
   color: #000000;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 70px;
+}
+.social-list {
+  width: 142px;
+  margin-right: 42px;
+}
+.phone-number {
+  width: 331px;
+  margin-right: 235px;
+  text-align: center;
 }

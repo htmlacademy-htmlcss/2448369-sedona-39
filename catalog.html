@@ -14,15 +14,15 @@
           <a class="page-header-logo" href="index.html" aria-current="page">
             <img class="main-logo" src="images/header-logo.svg" width="140" height="70" alt="Логотип сайта Седона">
           </a>
-          <ul class="navigation-list">
+          <ul class="navigation-list navigation-menu">
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="index.html">
+              <a class="navigation-link navigation-link-current" href="#">
                 Главная
               </a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="about.html">
-                О седоне
+                О Седоне
               </a>
             </li>
             <li class="navigation-item">
@@ -31,30 +31,32 @@
               </a>
             </li>
           </ul>
-          <ul class="navigation-list navigation-user">
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="visually-hidden">
-                  Поиск
-                </span>
-              </a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="visually-hidden">
-                  Количество избранных отелей
-                </span>
-                <span class="favorites-number">
-                  12
-                </span>
-              </a>
-            </li>
-          </ul>
-          <a class="button header-button" href="#">
-            <span>
-              Хочу сюда!
-            </span>
-          </a>
+          <div class="navigation-user-wrapper">
+            <ul class="navigation-list navigation-user">
+              <li class="navigation-item">
+                <a class="navigation-action navigation-link" href="#">
+                  <span class="visually-hidden">
+                    Поиск
+                  </span>
+                </a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-action navigation-link" href="#">
+                  <span class="visually-hidden">
+                    Количество избранных отелей
+                  </span>
+                  <span class="favorites-number">
+                    12
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <a class="button header-button" href="#">
+              <span>
+                Хочу сюда!
+              </span>
+            </a>
+          </div>
         </nav>
       </header>
 
@@ -136,7 +138,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="catalog-filter-group catalog-filter-group-price">
+            <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">
                 Стоимость,
                 <span>₽:</span>
@@ -161,7 +163,8 @@
         </section>
 
         <section class="search-results" data-test="catalog">
-          <h2 class="heading2">
+          <div class="search-results-wrapper">
+            <h2 class="heading2">
             Найдено гостиниц:
             <span class="result-count">
               38
@@ -194,6 +197,7 @@
               Показать список
             </span>
           </a>
+        </div>
 
           <ul class="product-list">
             <li class="product-card">

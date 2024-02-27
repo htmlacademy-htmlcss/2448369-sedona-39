@@ -174,13 +174,12 @@ body {
   background-size: 100% auto, cover;
   background-position: center bottom, center;
 
-  min-height: 485px;
   display: flex;
 
 }
 
 .hero > .welcome-text {
-  margin: auto;
+  margin: 51px 371px 82px 371px;
 }
 
 .advantages {
@@ -189,7 +188,6 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .heading2 {
@@ -531,6 +529,8 @@ body {
   margin: 0;
   padding: 0;
   margin-right: 70px;
+  display: flex;
+
 }
 
 

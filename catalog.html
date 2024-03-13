@@ -82,17 +82,21 @@
             <ul class="breadcrumbs-list">
               <li class="breadcrumbs-item breadcrumbs-homepage">
                 <a class="hotels-list-link" href="index.html">
-                  <svg class="homepage-icon" aria-hidden="true" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="homepage-icon" aria-hidden="true" width="14" height="15" viewBox="0 0 14 15" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_47227_383)">
-                    <path d="M7.37109 0.5L1.37109 6.30006V12.5001H13.3711V6.30006L7.37109 0.5ZM12.3711 11.5001H2.37109V6.70005L7.37109 1.9L12.3711 6.70005V11.5001Z" fill="white"/>
-                    <path d="M5.37109 10.5001H6.37109V8.00005H8.37109V10.5001H9.37109V7.00005H5.37109V10.5001Z" fill="white"/>
+                      <path
+                        d="M7.37109 0.5L1.37109 6.30006V12.5001H13.3711V6.30006L7.37109 0.5ZM12.3711 11.5001H2.37109V6.70005L7.37109 1.9L12.3711 6.70005V11.5001Z"
+                        fill="white" />
+                      <path d="M5.37109 10.5001H6.37109V8.00005H8.37109V10.5001H9.37109V7.00005H5.37109V10.5001Z"
+                        fill="white" />
                     </g>
                     <defs>
-                    <clipPath id="clip0_47227_383">
-                    <rect width="13" height="15" fill="white" transform="translate(0.871094)"/>
-                    </clipPath>
+                      <clipPath id="clip0_47227_383">
+                        <rect width="13" height="15" fill="white" transform="translate(0.871094)" />
+                      </clipPath>
                     </defs>
-                    </svg>
+                  </svg>
 
                   <span class="visually-hidden">На главную</span>
                 </a>
@@ -117,20 +121,23 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control" for="pool">
-                    <input class="control-input" type="checkbox" name="pool" id="pool" checked>
-                    Бассейн
+                    <input class="control-input visually-hidden" type="checkbox" name="pool" id="pool" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Бассейн</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control" for="parking">
-                    <input class="control-input" type="checkbox" name="parking" id="parking" checked>
-                    Парковка
+                    <input class="control-input visually-hidden" type="checkbox" name="parking" id="parking" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Парковка</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control" for="wi-fi">
-                    <input class="control-input" type="checkbox" name="Wi-Fi" id="wi-fi">
-                    Wi-Fi
+                    <input class="control-input visually-hidden" type="checkbox" name="Wi-Fi" id="wi-fi">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Wi-Fi</span>
                   </label>
                 </li>
               </ul>
@@ -143,20 +150,23 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="radio" value="hotel" name="product-group" checked>
-                    Гостиница
+                    <input class="control-input visually-hidden" type="radio" value="hotel" name="product-group" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Гостиница</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="radio" value="motel" name="product-group">
-                    Мотель
+                    <input class="control-input visually-hidden" type="radio" value="motel" name="product-group">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Мотель</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="radio" value="apartments" name="product-group">
-                    Апартаменты
+                    <input class="control-input visually-hidden" type="radio" value="apartments" name="product-group">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Апартаменты</span>
                   </label>
                 </li>
               </ul>
@@ -167,15 +177,31 @@
                 Стоимость,
                 <span>₽:</span>
               </legend>
-              <label for="price-from" class="visually-hidden">
-                От:
-              </label>
-              <input type="number" id="price-from" name="price-from" min="0" placeholder="От" value="0">
 
-              <label for="price-to" class="visually-hidden">
-                До:
-              </label>
-              <input type="number" id="price-to" name="price-to" min="0" placeholder="До" value="9000">
+              <div class="range-wrapper-inputs">
+                <label for="price-from" class="catalog-filter-label">
+                  <span class="visually-hidden">От:</span>
+                  <input class="range-input" type="number" id="price-from" name="price-from" min="0" value="0"
+                    placeholder="от">
+                </label>
+
+                <label for="price-to" class="catalog-filter-label">
+                  <span class="visually-hidden">До:</span>
+                  <input class="range-input" type="number" id="price-to" name="price-to" min="0" value="9000"
+                    placeholder="до">
+                </label>
+              </div>
+
+              <div class="range">
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0; width: 226px">
+                    <button class="range-toggle toggle-min" type="button">
+                    </button>
+                    <button class="range-toggle toggle-max" type="button">
+                    </button>
+                  </div>
+                </div>
+              </div>
 
             </fieldset>
 
@@ -195,55 +221,58 @@
               </span>
             </h2>
             <div class="select-control-wrapper">
-            <select class="select-control" aria-label="Сортировка">
-              <option value="cheap" selected>
-                Сначала дешевые
-              </option>
-              <option value="expensive">
-                Сначала дорогие
-              </option>
-              <option value="popular">
-                Сначала популярные
-              </option>
-            </select>
-          </div>
+              <select class="select-control" aria-label="Сортировка">
+                <option value="cheap" selected>
+                  Сначала дешевые
+                </option>
+                <option value="expensive">
+                  Сначала дорогие
+                </option>
+                <option value="popular">
+                  Сначала популярные
+                </option>
+              </select>
+            </div>
 
             <a class="card-grid-toggle card-grid-toggle-selected" href="#">
               <span class="visually-hidden">
                 Показать карточки
               </span>
-              <svg width="16" height="14" aria-hidden="true" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 0H0V6H4V0Z" fill="black"/>
-                <path d="M16 0H12V6H16V0Z" fill="black"/>
-                <path d="M10 0H6V6H10V0Z" fill="black"/>
-                <path d="M4 8H0V14H4V8Z" fill="black"/>
-                <path d="M16 8H12V14H16V8Z" fill="black"/>
-                <path d="M10 8H6V14H10V8Z" fill="black"/>
-                </svg>
+              <svg width="16" height="14" aria-hidden="true" viewBox="0 0 16 14" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 0H0V6H4V0Z" fill="black" />
+                <path d="M16 0H12V6H16V0Z" fill="black" />
+                <path d="M10 0H6V6H10V0Z" fill="black" />
+                <path d="M4 8H0V14H4V8Z" fill="black" />
+                <path d="M16 8H12V14H16V8Z" fill="black" />
+                <path d="M10 8H6V14H10V8Z" fill="black" />
+              </svg>
             </a>
             <a class="card-grid-toggle" href="#">
               <span class="visually-hidden">
                 Показать слайд-шоу
               </span>
-              <svg width="16" height="14" aria-hidden="true" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 12H0V14H16V12Z" fill="black"/>
-                <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black"/>
-                </svg>
+              <svg width="16" height="14" aria-hidden="true" viewBox="0 0 16 14" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 12H0V14H16V12Z" fill="black" />
+                <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black" />
+              </svg>
             </a>
             <a class="card-grid-toggle" href="#">
               <span class="visually-hidden">
                 Показать список
               </span>
-              <svg width="16" height="14" aria-hidden="true" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 0H0V2H2V0Z" fill="black"/>
-                <path d="M16 0H4V2H16V0Z" fill="black"/>
-                <path d="M2 4H0V6H2V4Z" fill="black"/>
-                <path d="M16 4H4V6H16V4Z" fill="black"/>
-                <path d="M2 8H0V10H2V8Z" fill="black"/>
-                <path d="M16 8H4V10H16V8Z" fill="black"/>
-                <path d="M2 12H0V14H2V12Z" fill="black"/>
-                <path d="M16 12H4V14H16V12Z" fill="black"/>
-                </svg>
+              <svg width="16" height="14" aria-hidden="true" viewBox="0 0 16 14" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 0H0V2H2V0Z" fill="black" />
+                <path d="M16 0H4V2H16V0Z" fill="black" />
+                <path d="M2 4H0V6H2V4Z" fill="black" />
+                <path d="M16 4H4V6H16V4Z" fill="black" />
+                <path d="M2 8H0V10H2V8Z" fill="black" />
+                <path d="M16 8H4V10H16V8Z" fill="black" />
+                <path d="M2 12H0V14H2V12Z" fill="black" />
+                <path d="M16 12H4V14H16V12Z" fill="black" />
+              </svg>
             </a>
           </div>
 

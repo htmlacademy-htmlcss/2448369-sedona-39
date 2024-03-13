@@ -704,6 +704,7 @@ body {
   position: relative;
   display: block;
   padding-left: 36px;
+  cursor: pointer;
 }
 
 .control-mark {
@@ -715,6 +716,7 @@ body {
   border-radius: 4px;
   background-color: #ffffff;
   padding: 6px 4px 4px 4px;
+  cursor: pointer;
 }
 
 .control:hover .control-mark,
@@ -832,9 +834,10 @@ body {
 .hotels-filter-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 32px;
   min-width: 191px;
+  margin-top: 56px;
 }
 
 .reset-button {

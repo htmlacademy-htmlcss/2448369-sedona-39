@@ -778,16 +778,18 @@ body {
 .range-input {
   width: 143px;
   min-height: 48px;
-  padding: 12px 20px;
+  padding: 12px 40px 12px 20px;
   font: inherit;
-  /* text-align: center; */
   background-color: #ffffff;
   border: none;
   appearance: textfield;
+}
+
+.range-wrapper-inputs .price-label-wrapper:first-child .range-input {
   border-radius: 4px 0 0 4px;
 }
 
-.catalog-filter-label:last-child .range-input {
+.range-wrapper-inputs .price-label-wrapper:last-child .range-input {
   border-radius: 0 4px 4px 0;
 }
 
@@ -829,6 +831,19 @@ body {
 .toggle-max {
   top: -9px;
   right: -10px;
+}
+
+.price-label-wrapper {
+  position: relative;
+}
+
+.price-label {
+  position: absolute;
+  content: "";
+  color: rgba(0, 0, 0, 0.3);
+  left: 103px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hotels-filter-buttons {

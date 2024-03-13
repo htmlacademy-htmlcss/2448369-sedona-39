@@ -150,7 +150,8 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" value="hotel" name="product-group" checked>
+                    <input class="control-input visually-hidden" type="radio" value="hotel" name="product-group"
+                      checked>
                     <span class="control-mark"></span>
                     <span class="control-label">Гостиница</span>
                   </label>
@@ -179,17 +180,21 @@
               </legend>
 
               <div class="range-wrapper-inputs">
-                <label for="price-from" class="catalog-filter-label">
-                  <span class="visually-hidden">От:</span>
-                  <input class="range-input" type="number" id="price-from" name="price-from" min="0" value="0"
-                    placeholder="от">
-                </label>
+                <div class="price-label-wrapper">
+                  <label for="price-from" class="catalog-filter-label">
+                    <span class="price-label">от</span>
+                    <input class="range-input" type="number" id="price-from" name="price-from" min="0" value="0"
+                      placeholder="0">
+                  </label>
+                </div>
 
-                <label for="price-to" class="catalog-filter-label">
-                  <span class="visually-hidden">До:</span>
-                  <input class="range-input" type="number" id="price-to" name="price-to" min="0" value="9000"
-                    placeholder="до">
-                </label>
+                <div class="price-label-wrapper">
+                  <label for="price-to" class="catalog-filter-label">
+                    <span class="price-label">до</span>
+                    <input class="range-input" type="number" id="price-to" name="price-to" min="0" value="9000"
+                      placeholder="9000">
+                  </label>
+                </div>
               </div>
 
               <div class="range">

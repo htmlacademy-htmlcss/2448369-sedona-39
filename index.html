@@ -95,14 +95,14 @@
           <ul class="advantages-list">
 
             <li class="advantages-item advantages-item-wide">
-                <div class="advantages-item-wrapper">
-                  <h3 class="advantages-title">
-                    Настоящий городок
-                  </h3>
-                  <p class="advantages-description">
-                    Седона — не аттракцион для туристов, там течёт своя жизнь
-                  </p>
-                </div>
+              <div class="advantages-item-wrapper">
+                <h3 class="advantages-title">
+                  Настоящий городок
+                </h3>
+                <p class="advantages-description">
+                  Седона — не аттракцион для туристов, там течёт своя жизнь
+                </p>
+              </div>
               <img class="advantages-image" src="images/photo-1.jpg" width="800" height="385"
                 alt="Изображен городок Седона">
             </li>
@@ -134,12 +134,12 @@
             <li class="advantages-item advantages-item-wide">
               <img class="advantages-image" src="images/photo-2.jpg" width="800" height="385"
                 alt="Изображен живописный каньон">
-                <div class="advantages-item-wrapper">
-                  <h3 class="advantages-title">Там&nbsp;есть мост&nbsp;дьявола</h3>
-                  <p class="advantages-description">
-                    Да, по нему можно пройти! Если вы осмелитесь, разумеется
-                  </p>
-                </div>
+              <div class="advantages-item-wrapper">
+                <h3 class="advantages-title">Там&nbsp;есть мост&nbsp;дьявола</h3>
+                <p class="advantages-description">
+                  Да, по нему можно пройти! Если вы осмелитесь, разумеется
+                </p>
+              </div>
 
             </li>
           </ul>
@@ -285,6 +285,70 @@
           </a>
         </div>
       </footer>
+    </div>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-hotel-search">
+
+        <section class="modal-form-section">
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <h2 class="modal-title">
+            Поиск гостиницы в Седоне
+          </h2>
+
+          <div class="hotel-search-form-wrapper">
+            <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="post">
+              <p class="field-group">
+                <label class="modal-label" for="">
+                  Дата заезда:
+                </label>
+                <input class="modal-input" type="date" id="" name="date-in" min="" value="27 апреля 2020"
+                  placeholder="выберите дату заезда">
+              </p>
+              <span class="date-in-notification">
+                Мы не можем отправить вас в прошлое.
+              </span>
+
+              <p class="field-group">
+                <label class="modal-label" for="">
+                  Дата выезда:
+                </label>
+                <input class="modal-input " type="date" id="" name="date-out" min="" value="1 сентября 2023"
+                  placeholder="выберите дату выезда">
+              </p>
+              <span class="date-out-notification">
+                На эти даты есть свободные номера. Пока есть.
+              </span>
+
+              <p class="field-group">
+                <label class="modal-label" for="">
+                  Взрослые:
+                </label>
+                <input class="guests-modal-input" type="number" id="" name="" min="1" value="2"
+                  placeholder="выберите дату выезда">
+
+                <label class="modal-label" for="">
+                  Дети:
+                </label>
+                <input class="guests-modal-input" type="number" id="" name="" min="0" value="2"
+                  placeholder="выберите дату выезда">
+              </p>
+              <!-- Дата заезда: 27 апреля 2020
+
+            Дата выезда: 1 сентября 2023
+            Взрослые: 2 Дети: 2 -->
+              <!-- Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются
+            бесплатно. -->
+            </form>
+          </div>
+        </section>
+
+        <button class="button button-light modal-button" type="submit">
+          Найти
+        </button>
+      </div>
     </div>
   </body>
 

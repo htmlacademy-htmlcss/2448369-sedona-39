@@ -216,8 +216,8 @@ body {
 
 .favorites-number {
   position: absolute;
-  top: 11px;
-  right: 4px;
+  top: 10px;
+  right: 3px;
   background-color: #7db54f;
   color: #ffffff;
   font-weight: 400;
@@ -953,7 +953,7 @@ body {
 
 .search-results {
   margin: 0;
-  padding: 70px;
+  padding: 56px 70px 70px 70px;;
   display: flex;
   flex-direction: column;
 }
@@ -1286,6 +1286,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  z-index: 3;
 }
 
 .modal {
@@ -1293,6 +1294,7 @@ body {
   margin: auto;
   background-color: #ffffff;
   padding: 64px 70px;
+
 }
 
 .modal-hotel-search {
@@ -1307,6 +1309,7 @@ body {
 
 .modal-close-button {
   position: absolute;
+  content: "";
   padding: 0;
   top: 0;
   right: 0;
@@ -1340,9 +1343,27 @@ body {
 }
 
 .field-group {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 48px;
+}
+
+.field-group::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-image: url(../images/icons/calender.svg);
+  top: 50%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  right: 20px;
+
 }
 
 .modal-label {
@@ -1353,6 +1374,7 @@ body {
 }
 
 .modal-input {
+  /* position: relative; */
   width: 440px;
   height: 48px;
   color: #000000;
@@ -1360,6 +1382,38 @@ body {
   border: none;
   border-radius: 4px;
   padding: 12px 40px 12px 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+}
+
+.date-in-notification {
+  position: absolute;
+  content: "";
+  color: #ff5757;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 131%;
+  top: 48px;
+  left: 157px;
+}
+
+.date-out-notification {
+  position: absolute;
+  content: "";
+  color: #333333;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 131%;
+  left: 157px;
+  top: 48px;
+}
+
+.field-group-guests {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
 }
 
 .guests-modal-input {
@@ -1369,15 +1423,139 @@ body {
   background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 111%;
+  text-align: center;
+  appearance: textfield;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
+.guests-modal-input::-webkit-outer-spin-button,
+.guests-modal-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.guests-field-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+}
+
+.guests-modal-input-wrapper {
+  position: relative;
+}
+
+.guests-modal-input-wrapper::before,
+.guests-modal-input-wrapper::after {
+  content: "";
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
+.guests-modal-input-wrapper::before {
+  background-image: url(../images/icons/minus.svg);
+  left: 10px;
+}
+
+.guests-modal-input-wrapper::after {
+  background-image: url(../images/icons/plus.svg);
+  right: 10px;
+}
+
+.kids {
+  padding-right: 36px;
+  position: relative;
+}
+
+.kids-icon {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(../images/icons/infoicon.svg);
+  left: 10px;
+}
+
+
 .modal-button {
+  display: block;
   width: 577px;
   font-size: 20px;
   line-height: 120%;
   min-height: 60px;
-  /* padding: 18px auto; */
+  padding: 18px auto;
 }
+
+.tooltip {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  width: 256px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  text-transform: none;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+
+  z-index: 4;
+  display: none;
+}
+
+.tooltip-text::before {
+  content: "";
+  position: absolute;
+  top: -20px; /* Помещаем стрелочку над тултипом */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #333333 transparent;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+
+
 
 .modal-container-close {
   display: none;

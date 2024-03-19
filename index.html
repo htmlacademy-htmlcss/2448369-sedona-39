@@ -145,7 +145,7 @@
           </ul>
         </section>
 
-        <section class="sedona-services">
+        <section class="sedona-services" data-test="service">
           <h2 class="come-to-sedona heading2">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
           <p class="heading2-description">Опытный персонал и качественное обслуживание!</p>
 
@@ -300,47 +300,59 @@
 
           <div class="hotel-search-form-wrapper">
             <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="post">
-              <p class="field-group">
+              <div class="field-group">
                 <label class="modal-label" for="">
                   Дата заезда:
                 </label>
-                <input class="modal-input" type="date" id="" name="date-in" min="" value="27 апреля 2020"
-                  placeholder="выберите дату заезда">
-              </p>
-              <span class="date-in-notification">
-                Мы не можем отправить вас в прошлое.
-              </span>
+                <input class="modal-input" type="text" id="" name="date-in" min="" value="27 апреля 2020"
+                  placeholder="выберите дату заезда" required>
+                <span class="date-in-notification">
+                  Мы не можем отправить вас в прошлое.
+                </span>
+              </div>
 
-              <p class="field-group">
+
+              <div class="field-group">
                 <label class="modal-label" for="">
                   Дата выезда:
                 </label>
-                <input class="modal-input " type="date" id="" name="date-out" min="" value="1 сентября 2023"
-                  placeholder="выберите дату выезда">
-              </p>
-              <span class="date-out-notification">
-                На эти даты есть свободные номера. Пока есть.
-              </span>
+                <input class="modal-input " type="text" id="" name="date-out" min="" value="1 сентября 2023"
+                  placeholder="выберите дату выезда" required>
+                <span class="date-out-notification">
+                  На эти даты есть свободные номера. Пока есть.
+                </span>
+              </div>
 
-              <p class="field-group">
-                <label class="modal-label" for="">
-                  Взрослые:
-                </label>
-                <input class="guests-modal-input" type="number" id="" name="" min="1" value="2"
-                  placeholder="выберите дату выезда">
 
-                <label class="modal-label" for="">
-                  Дети:
-                </label>
-                <input class="guests-modal-input" type="number" id="" name="" min="0" value="2"
-                  placeholder="выберите дату выезда">
-              </p>
-              <!-- Дата заезда: 27 апреля 2020
+              <div class="field-group-guests">
+                <div class="guests-field-wrapper">
+                  <label class="modal-label" for="adults-number">
+                    Взрослые:
+                  </label>
+                  <div class="guests-modal-input-wrapper">
+                    <input class="guests-modal-input" type="number" id="adults-number" name="" min="1" value="2">
+                  </div>
+                </div>
 
-            Дата выезда: 1 сентября 2023
-            Взрослые: 2 Дети: 2 -->
-              <!-- Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются
-            бесплатно. -->
+                <div class="guests-field-wrapper">
+                  <label class="modal-label kids form-label-icon" for="kids-number">
+                    Дети:
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button">
+                        <span class="kids-icon"></span>
+                      </button>
+                      <span class="tooltip-text">
+                        Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                        размещаются бесплатно
+                      </span>
+                    </span>
+                  </label>
+                  <div class="guests-modal-input-wrapper">
+                    <input class="guests-modal-input" type="number" id="kids-number" name="" min="0" value="2">
+                  </div>
+                </div>
+              </div>
+
             </form>
           </div>
         </section>

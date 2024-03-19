@@ -26,9 +26,6 @@ html {
 
 body {
   margin: 0;
-  /* display: flex;
-  flex-direction: column; */
-  /* min-height: 100%; */
   font-family: "PT sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -63,6 +60,7 @@ body {
 
   border-radius: 4px;
   padding: 8px 50px;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
@@ -137,6 +135,8 @@ body {
   text-align: center;
   cursor: pointer;
   position: relative;
+
+  transition: color 0.3s ease;
 }
 
 .navigation-link[aria-current="page"]::after {
@@ -225,7 +225,7 @@ body {
 
 .header-button {
   display: block;
-  width: 160px;
+  min-width: 160px;
   padding: 8px 34px;
 }
 
@@ -713,19 +713,31 @@ body {
   cursor: pointer;
 }
 
-.control:hover .control-mark,
-.control-label:hover {
+
+.control-input:not(:disabled):hover ~ .control-mark,
+.control-input:focus ~ .control-mark {
   opacity: 60%;
 }
 
-.control:focus-visible .control-mark,
-.control-label:focus-visible {
-  border: 3px solid rgba(131, 179, 211, 1);
+.control-input:not(:disabled):hover ~ .control-label {
+  opacity: 60%;
 }
 
-.control:active .control-mark,
-.control-label:active {
+.control-input:not(:disabled):active ~ .control-mark::before {
   opacity: 30%;
+}
+.control-input:not(:disabled):active ~ .control-label {
+  opacity: 30%;
+}
+
+.control-input[type="checkbox"]:not(:disabled):focus-visible ~ .control-mark {
+  outline: 3px solid rgba(131, 179, 211, 1);
+  opacity: 100%;
+}
+
+.control-input[type="radio"]:not(:disabled):focus-visible ~ .control-mark {
+  outline: 3px solid rgba(131, 179, 211, 1);
+  opacity: 100%;
 }
 
 .control-input {
@@ -815,6 +827,19 @@ body {
   border-radius: 5px;
   cursor: pointer;
   padding: 0;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus-visible {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  outline: 3px solid rgba(131, 179, 211, 1);
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
 }
 
 .toggle-min {
@@ -916,21 +941,16 @@ body {
 }
 
 .select-control:hover,
-.select-control:focus-visible,
-.field:hover,
-.field:focus-visible {
+.select-control:focus-visible {
   border: 2px solid #68a2ca;
 }
 
 .select-control-disabled,
-.select-control-disabled:hover,
-.field:disabled,
-.field:disabled:hover {
+.select-control-disabled:hover {
   border: 2px solid rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
   pointer-events: none;
 }
-
 
 
 
@@ -1251,6 +1271,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   padding: 13px 12px;
+
 }
 
 .social-item-icon:hover path,
@@ -1331,7 +1352,7 @@ body {
   padding: 0;
   top: 0;
   right: 0;
-  width: 52px;
+  min-width: 52px;
   height: 52px;
   background-color: #f2f2f2;
   border-radius: 100%;
@@ -1340,7 +1361,18 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+}
 
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus-visible {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active {
+  opacity: 30%;
 }
 
 .modal-title {
@@ -1393,7 +1425,6 @@ body {
 }
 
 .modal-input {
-  /* position: relative; */
   width: 440px;
   height: 48px;
   color: #000000;
@@ -1404,6 +1435,10 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 133%;
+}
+
+.modal-input:hover {
+  background-color: #e6e6e6;
 }
 
 .date-in-notification {
@@ -1465,13 +1500,10 @@ body {
 
 
 .guests-modal-input-wrapper {
-  /* display: flex;
-  gap: 0;
-  max-width: 111px; */
   position: relative;
 }
 
-.minus {
+.decrement-button {
   position: absolute;
   content: "";
   top: 50%;
@@ -1479,22 +1511,25 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
-
+  width: 40px;
+  height: 48px;
+  left: 0;
 }
 
-.minus::before {
+.decrement-button::before {
   position: absolute;
   content: "";
-
   width: 14px;
   height: 2px;
   background-color: #cdc7c4;
   border: none;
   cursor: pointer;
-  left: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.plus {
+.increment-button {
   position: absolute;
   content: "";
   top: 50%;
@@ -1502,9 +1537,12 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  width: 40px;
+  height: 48px;
+  right: 0;
 }
 
-.plus::before {
+.increment-button::before {
   position: absolute;
   content: "";
   width: 14px;
@@ -1512,11 +1550,12 @@ body {
   background-color: #cdc7c4;
   border: none;
   cursor: pointer;
-  right: 30px;
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.plus::after {
+.increment-button::after {
   position: absolute;
   content: "";
   width: 2px;
@@ -1524,9 +1563,23 @@ body {
   background-color: #cdc7c4;
   border: none;
   cursor: pointer;
-  top: -6px;
-  right: 36px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+.decrement-button:hover::before,
+.increment-button:hover::before,
+.increment-button:hover:after {
+  background-color: #000000;
+}
+
+.decrement-button:focus-visible,
+.increment-button:focus-visible {
+  outline: 3px solid rgba(131, 179, 211, 1);
+  padding: 20px;
+}
+
 
 .kids {
   padding-right: 36px;
@@ -1534,24 +1587,20 @@ body {
 }
 
 .kids-icon {
-  position: absolute;
-  content: "";
+  display: block;
   width: 26px;
   height: 26px;
   cursor: pointer;
-  top: 50%;
-  transform: translateY(-50%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   background-image: url(../images/icons/infoicon.svg);
-  left: 10px;
 }
 
 
 .modal-button {
   display: block;
-  width: 577px;
+  min-width: 577px;
   font-size: 20px;
   line-height: 120%;
   min-height: 60px;
@@ -1562,6 +1611,7 @@ body {
   position: absolute;
   width: 26px;
   height: 26px;
+  margin-left: 10px;
 }
 
 .tooltip-toggle {
@@ -1597,7 +1647,6 @@ body {
   content: "";
   position: absolute;
   top: -18px;
-  /* Помещаем стрелочку над тултипом */
   left: 50%;
   transform: translateX(-50%);
   border-width: 10px;

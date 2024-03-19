@@ -1596,7 +1596,7 @@ body {
 .tooltip-text::before {
   content: "";
   position: absolute;
-  top: -20px;
+  top: -18px;
   /* Помещаем стрелочку над тултипом */
   left: 50%;
   transform: translateX(-50%);
@@ -1610,9 +1610,6 @@ body {
   display: block;
 }
 
-
-
-
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}

@@ -200,6 +200,7 @@ body {
   padding: 0;
   list-style-type: none;
   align-items: center;
+  max-width: 140px;
 }
 
 .navigation-action.navigation-link {
@@ -442,11 +443,10 @@ body {
   position: relative;
   background-color: rgba(131, 179, 211, 0.12);
   width: 400px;
-  height: 385px;
+  min-height: 385px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-content: center;
   justify-content: flex-start;
   align-items: center;
@@ -874,7 +874,7 @@ body {
 .hotels-filter-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 32px;
   min-width: 191px;
   margin-top: 56px;
@@ -981,6 +981,16 @@ body {
   margin-bottom: 62px;
   display: flex;
   flex-direction: column;
+}
+
+.display-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+  max-width: 160px;
 }
 
 .card-grid-toggle {

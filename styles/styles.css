@@ -50,7 +50,7 @@ body {
   font-size: 16px;
   line-height: 20px;
 
-  background-color: rgba(117, 97, 87, 1);
+  background-color: #756157;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
@@ -64,45 +64,45 @@ body {
 }
 
 .button:hover {
-  background-color: rgba(97, 80, 72, 1);
+  background-color: #615048;
 }
 
 .button:focus-visible {
-  background-color: rgba(97, 80, 72, 1);
+  background-color: #615048;
 }
 
 .button:active {
-  background-color: rgba(117, 97, 87, 1);
+  background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
 }
 
 
 
 .button-light {
-  background-color: rgba(130, 179, 211, 1);
+  background-color: #82b3d3;
   color: #ffffff;
   text-align: center;
   letter-spacing: -1px;
 }
 
 .button-light:hover {
-  background-color: rgba(104, 162, 202, 1);
+  background-color: #68a2ca;
 }
 
 .button-light:focus-visible {
-  background-color: rgba(104, 162, 202, 1);
+  background-color: #68a2ca;
 }
 
 .button-light:active {
-  background-color: rgba(130, 179, 211, 1);
+  background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
 }
 
 
 .button-disabled,
 .button-disabled:hover {
-  background-color: rgba(229, 229, 229, 1);
-  color: rgba(255, 255, 255, 1);
+  background-color: #e5e5e5;
+  color: #ffffff;
 }
 
 .page-header {
@@ -239,7 +239,7 @@ body {
 
 .hero {
   background-image:
-    url("../images/divider.png"),
+    url("../images/divider.svg"),
     url("../images/index-background.jpg");
   background-color: rgb(82, 130, 168);
   background-repeat: no-repeat, no-repeat;
@@ -512,7 +512,7 @@ body {
 }
 
 .colorful-subscription {
-  background-image: url("../images/subscribe.png");
+  background-image: url("../images/subscribe.jpg");
   background-color: rgb(82, 130, 168);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -560,7 +560,7 @@ body {
   width: 452px;
   border: none;
   background-color: #f2f2f2;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   font: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -571,7 +571,7 @@ body {
 
 
 .hotels-filter {
-  background-image: url("../images/hotels-filter.png");
+  background-image: url("../images/hotels-filter.jpg");
   background-color: rgb(82, 130, 168);
   background-repeat: no-repeat;
   background-size: cover;
@@ -717,6 +717,12 @@ body {
   cursor: pointer;
 }
 
+.control-input:disabled ~ .control-mark,
+.control-input:disabled ~ .control-label {
+  opacity: 40%;
+  cursor: default;
+}
+
 .control-input:not(:disabled):hover ~ .control-mark,
 .control-input:focus ~ .control-mark {
   opacity: 60%;
@@ -734,12 +740,12 @@ body {
 }
 
 .control-input[type="checkbox"]:not(:disabled):focus-visible ~ .control-mark {
-  outline: 3px solid rgba(131, 179, 211, 1);
+  outline: 3px solid #83b3d3;
   opacity: 100%;
 }
 
 .control-input[type="radio"]:not(:disabled):focus-visible ~ .control-mark {
-  outline: 3px solid rgba(131, 179, 211, 1);
+  outline: 3px solid #83b3d3;
   opacity: 100%;
 }
 
@@ -843,7 +849,7 @@ body {
 }
 
 .range-toggle:active {
-  outline: 3px solid rgba(131, 179, 211, 1);
+  outline: 3px solid #83b3d3;
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -886,13 +892,12 @@ body {
 }
 
 .reset-button:hover {
-  color: rgba(255, 255, 255, 1);
+  color: #ffffff;
   opacity: 60%;
   background-color: transparent;
 }
 
 .reset-button:focus-visible {
-  border: 3px solid rgba(131, 179, 211, 1);
   background-color: transparent;
 }
 
@@ -903,7 +908,7 @@ body {
 
 .reset-button-disabled,
 .reset-button-disabled:hover {
-  color: rgba(255, 255, 255, 1);
+  color: #ffffff;
   background-color: transparent;
   opacity: 10%;
 }
@@ -915,8 +920,7 @@ body {
   line-height: 21px;
   -webkit-appearance: none;
           appearance: none;
-
-  color: rgba(51, 51, 51, 1);
+  color: #333333;
   margin: 0;
   display: flex;
   border-radius: 4px;
@@ -948,14 +952,13 @@ body {
   pointer-events: none;
 }
 
-.select-control:hover,
-.select-control:focus-visible {
-  border: 2px solid #68a2ca;
+.select-control:hover {
+  outline: 2px solid #68a2ca;
 }
 
 .select-control-disabled,
 .select-control-disabled:hover {
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  outline: 2px solid rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
   pointer-events: none;
 }
@@ -999,7 +1002,7 @@ body {
   justify-content: center;
   width: 48px;
   height: 48px;
-  border: 2px solid rgba(229, 229, 229, 1);
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
   padding: 14px 12px;
   align-items: center;
@@ -1010,19 +1013,15 @@ body {
 }
 
 .card-grid-toggle-selected {
-  border: 2px solid rgba(0, 0, 0, 1);
+  border: 2px solid #000000;
 }
 
 .card-grid-toggle:hover {
-  border: 2px solid rgba(0, 0, 0, 1);
-}
-
-.card-grid-toggle:focus-visible {
-  border: 2px solid rgba(104, 162, 202, 1);
+  border: 2px solid #000000;
 }
 
 .card-grid-toggle:active {
-  border: 2px solid rgba(0, 0, 0, 1);
+  border: 2px solid #000000;
 }
 
 .product-list {
@@ -1044,7 +1043,7 @@ body {
   grid-template-rows: 212px 1fr;
   padding: 20px;
   gap: 16px 20px;
-  border: 1px solid rgba(230, 230, 230, 1);
+  border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
 
@@ -1142,38 +1141,38 @@ body {
 }
 
 .button-selected {
-  background-color: rgba(125, 181, 79, 1);
+  background-color: #7db54f;
   display: block;
   margin: 0;
   padding: 8px 15px;
 }
 
 .button-selected:hover {
-  background-color: rgba(108, 158, 66, 1);
+  background-color: #6c9e42;
 }
 
 .button-selected:focus-visible {
-  background-color: rgba(108, 158, 66, 1);
+  background-color: #6c9e42;
 }
 
 .button-selected:active {
-  background-color: rgba(125, 181, 79, 1);
+  background-color: #7db54f;
   color: rgba(255, 255, 255, 0.3);
 }
 
 .button-selected:disabled,
 .button-selected:disabled:hover {
-  background-color: rgba(229, 229, 229, 1);
-  color: rgba(255, 255, 255, 1);
+  background-color: #e5e5e5;
+  color: #ffffff;
 }
 
 .product-card-rating {
   display: block;
-  background-color: rgba(242, 242, 242, 1);
+  background-color: #f2f2f2;
 
   font-size: 16px;
   line-height: 20px;
-  color: rgba(51, 51, 51, 1);
+  color: #333333;
 
   margin: 0;
   padding: 9px 22px;
@@ -1196,14 +1195,14 @@ body {
   content: "";
   width: 1060px;
   height: 1px;
-  background-color: rgba(230, 230, 230, 1);
+  background-color: #e6e6e6;
   left: 50%;
   transform: translateX(-50%);
   top: -40px;
 }
 
 .pagitanion-current-button {
-  background-color: rgba(242, 242, 242, 1);
+  background-color: #f2f2f2;
   text-decoration: none;
   color: #000000;
 }
@@ -1251,7 +1250,7 @@ body {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   text-decoration: none;
   max-width: 340px;
 }
@@ -1259,13 +1258,13 @@ body {
 .phone-number:hover,
 .navigation-link:hover,
 .product-card-title:hover {
-  color: rgba(117, 97, 87, 1);
+  color: #756157;
 }
 
 .phone-number:focus-visible,
 .navigation-link:focus-visible,
 .product-card-title:hover {
-  color: rgba(117, 97, 87, 1);
+  color:  #756157;
 }
 
 .phone-number:active,
@@ -1301,7 +1300,7 @@ body {
 
 .social-item-icon:hover path,
 .social-item-icon:focus-visible path {
-  fill: rgba(104, 162, 202, 1);
+  fill: #68a2ca;
 
 }
 
@@ -1318,7 +1317,7 @@ body {
 .html-academy-icon:focus-visible path,
 .navigation-action:hover path,
 .navigation-action:focus-visible path {
-  fill: rgba(117, 97, 87, 1);
+  fill: #756157;
 }
 
 .html-academy-icon:active path,
@@ -1615,7 +1614,6 @@ body {
 
 .decrement-button:focus-visible,
 .increment-button:focus-visible {
-  outline: 3px solid rgba(131, 179, 211, 1);
   padding: 20px;
 }
 

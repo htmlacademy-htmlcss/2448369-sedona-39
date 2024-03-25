@@ -194,7 +194,7 @@
           </p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="subscription-email">
-              Укажите Ваш email
+              Укажите Ваш e-mail
             </label>
             <input class="field" type="email" name="subscription-email" placeholder="Ваш e-mail"
               id="subscription-email">
@@ -339,16 +339,24 @@
                   </label>
 
                   <div class="guests-modal-input-wrapper">
-                    <button class="decrement-button" type="button"></button>
+                    <button class="decrement-button" type="button">
+                      <span class="visually-hidden">
+                        Уменьшить количество гостей
+                      </span>
+                    </button>
                     <input class="guests-modal-input" type="number" id="adults-number" name="adults-number" min="1"
                       value="2">
-                    <button class="increment-button" type="button"></button>
+                    <button class="increment-button" type="button">
+                      <span class="visually-hidden">
+                        Увеличить количество гостей
+                      </span>
+                    </button>
                   </div>
 
                 </div>
 
                 <div class="guests-field-wrapper">
-                  <label class="modal-label kids form-label-icon">
+                  <label class="modal-label kids form-label-icon" for="kids-number">
                     Дети:
                     <span class="tooltip">
                       <button class="tooltip-toggle" type="button">
@@ -360,12 +368,19 @@
                       </span>
                     </span>
                   </label>
-
                   <div class="guests-modal-input-wrapper">
-                    <button class="decrement-button" type="button"></button>
+                    <button class="decrement-button" type="button">
+                      <span class="visually-hidden">
+                        Уменьшить количество гостей
+                      </span>
+                    </button>
                     <input class="guests-modal-input" type="number" id="kids-number" name="kids-number" min="0"
                       value="2">
-                    <button class="increment-button" type="button"></button>
+                    <button class="increment-button" type="button">
+                      <span class="visually-hidden">
+                        Увеличить количество гостей
+                      </span>
+                    </button>
                   </div>
 
                 </div>

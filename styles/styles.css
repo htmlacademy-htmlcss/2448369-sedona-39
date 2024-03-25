@@ -174,7 +174,6 @@ body {
   margin: 0;
   padding: 0;
   min-width: 315px;
-  /*268+44 запасное пространство для добавления пункта меню */
   margin-left: auto;
   align-items: center;
   gap: 20px;
@@ -449,7 +448,6 @@ body {
   align-content: center;
   justify-content: flex-start;
   align-items: center;
-  /* flex-grow: 1; */
   margin: 0;
   padding: 0 85px;
   padding-top: 78px;
@@ -1359,7 +1357,6 @@ body {
 }
 
 .modal {
-  /* position: relative; */
   margin: auto;
   background-color: #ffffff;
   padding: 64px 70px;

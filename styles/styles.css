@@ -46,7 +46,7 @@ body {
 
 .button {
   display: inline-block;
-  font-family: 'PT sans';
+  font-family: "PT sans";
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -797,11 +797,11 @@ body {
   appearance: textfield;
 }
 
-.range-wrapper-inputs .price-label-wrapper:first-child .range-input {
+.price-label-wrapper:first-child .range-input {
   border-radius: 4px 0 0 4px;
 }
 
-.range-wrapper-inputs .price-label-wrapper:last-child .range-input {
+.price-label-wrapper:last-child .range-input {
   border-radius: 0 4px 4px 0;
 }
 
@@ -911,7 +911,7 @@ body {
 .select-control {
   position: relative;
   min-width: 292px;
-  font-family: 'PT sans';
+  font-family: "PT sans";
   font-size: 18px;
   line-height: 21px;
   -webkit-appearance: none;
@@ -1457,7 +1457,7 @@ body {
   border: none;
   border-radius: 4px;
   padding: 12px 40px 12px 20px;
-  font-family: 'PT sans';
+  font-family: "PT sans";
   font-weight: 700;
   font-size: 18px;
   line-height: 133%;
